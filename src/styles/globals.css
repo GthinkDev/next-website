@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+}
+
+html,
+body {
+  @apply bg-base-200 leading-normal text-base-content h-screen;
+}
