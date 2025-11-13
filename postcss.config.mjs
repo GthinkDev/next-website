@@ -1,6 +1,10 @@
 const config = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    "@tailwindcss/postcss": {
+      plugins: ["daisyui"],
+    },
+    // 添加 autoprefixer 来处理现代 CSS 特性
+    'autoprefixer': {},
   },
 };
 

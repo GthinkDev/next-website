@@ -3,158 +3,158 @@ const ThemeData = {
     {
       id: 1,
       name: "light",
-      displayName: "Light",
+      displayName: "明亮光感",
     },
 
     {
       id: 3,
       name: "cupcake",
-      displayName: "Cupcake",
+      displayName: "纸杯蛋糕",
     },
     {
       id: 4,
       name: "bumblebee",
-      displayName: "Bumblebee",
+      displayName: "大黄蜂",
     },
     {
       id: 5,
       name: "emerald",
-      displayName: "Emerald",
+      displayName: "翡翠绿",
     },
     {
       id: 6,
       name: "corporate",
-      displayName: "Corporate",
+      displayName: "企业风格",
     },
 
     {
       id: 8,
       name: "retro",
-      displayName: "Retro",
+      displayName: "复古怀旧",
     },
     {
       id: 9,
       name: "cyberpunk",
-      displayName: "Cyberpunk",
+      displayName: "赛博朋克",
     },
     {
       id: 10,
       name: "valentine",
-      displayName: "Valentine",
+      displayName: "情人节",
     },
 
     {
       id: 12,
       name: "garden",
-      displayName: "Garden",
+      displayName: "花园漫步",
     },
 
     {
       id: 15,
       name: "lofi",
-      displayName: "Lofi",
+      displayName: "低保真风",
     },
     {
       id: 16,
       name: "pastel",
-      displayName: "Pastel",
+      displayName: "柔和粉彩",
     },
     {
       id: 17,
       name: "fantasy",
-      displayName: "Fantasy",
+      displayName: "梦幻仙境",
     },
     {
       id: 18,
       name: "wireframe",
-      displayName: "Wireframe",
+      displayName: "线框设计",
     },
 
     {
       id: 22,
       name: "cmyk",
-      displayName: "CMYK",
+      displayName: "印刷四色",
     },
     {
       id: 23,
       name: "autumn",
-      displayName: "Autumn",
+      displayName: "秋日落叶",
     },
 
     {
       id: 25,
       name: "acid",
-      displayName: "Acid",
+      displayName: "酸性迷幻",
     },
     {
       id: 26,
       name: "lemonade",
-      displayName: "Lemonade",
+      displayName: "柠檬汽水",
     },
 
     {
       id: 29,
       name: "winter",
-      displayName: "Winter",
+      displayName: "冬日雪景",
     },
   ],
   dark: [
     {
       id: 24,
       name: "business",
-      displayName: "Business",
+      displayName: "商务精英",
     },
     {
       id: 20,
       name: "luxury",
-      displayName: "Luxury",
+      displayName: "奢华典雅",
     },
     {
       id: 101,
       name: "dark",
-      displayName: "Dark",
+      displayName: "暗夜模式",
     },
     {
       id: 102,
       name: "synthwave",
-      displayName: "Synthwave",
+      displayName: "合成浪潮",
     },
 
     {
       id: 105,
       name: "halloween",
-      displayName: "Halloween",
+      displayName: "万圣之夜",
     },
     {
       id: 106,
       name: "forest",
-      displayName: "Forest",
+      displayName: "森林幽境",
     },
     {
       id: 107,
       name: "aqua",
-      displayName: "Aqua",
+      displayName: "海洋之蓝",
     },
 
     {
       id: 109,
       name: "black",
-      displayName: "Black",
+      displayName: "纯黑简约",
     },
     {
       id: 110,
       name: "dracula",
-      displayName: "Dracula",
+      displayName: "德古拉风",
     },
     {
       id: 111,
       name: "night",
-      displayName: "Night",
+      displayName: "静谧夜晚",
     },
     {
       id: 112,
       name: "coffee",
-      displayName: "Coffee",
+      displayName: "咖啡时光",
     },
   ],
 };

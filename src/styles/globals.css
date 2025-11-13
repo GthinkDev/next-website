@@ -3,7 +3,22 @@
   themes: all;
 }
 
-html,
-body {
-  @apply bg-base-200 leading-normal text-base-content h-screen;
+  html {
+    @apply bg-base-200 leading-normal text-base-content;
+  }
+  
+  body {
+    @apply bg-base-200 leading-normal text-base-content min-h-screen;
+  }
+
+.lgTitle{
+  @apply text-xl md:text-4xl lg:text-5xl font-black;
+}
+
+.descriptionText{
+  @apply text-[10px] md:text-sm font-medium;
+}
+
+.secondaryText{
+  @apply text-sm md:text-base font-medium;
 }

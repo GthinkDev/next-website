@@ -1,0 +1,7 @@
+
+.bgImage {
+  /* 这个类将被JavaScript动态设置背景图片 */
+  background-size: 90%; /* 确保图片覆盖整个正方形容器 */
+  background-position: center; /* 图片居中显示 */
+  background-repeat: no-repeat; /* 不重复图片 */
+}
