@@ -62,19 +62,19 @@ export const MallStatusItems: FC<MallStatusItemsProps> = (props) => {
 	}, [image])
 
 	return (
-		<Link href={'/'} className='hover-3d cursor-pointer aspect-square w-full rounded-box '>
+		<Link href={'/'} className='hover-3d cursor-pointer aspect-square w-full '>
 			{/* content */}
 			<div
 				ref={bgRef}
-				className={`hover-3d w-full h-full bg-cover bg-center bg-no-repeat bg-base-100 cursor-pointer p-16 hover:shadow-xl hover:shadow-base-300 relative overflow-hidden ${
+				className={`hover-3d w-full h-full bg-cover bg-center rounded-box bg-base-200 bg-no-repeat  cursor-pointer p-16 hover:shadow-xl hover:shadow-base-300 relative overflow-hidden ${
 					image ? styles.bgImage : ''
 				}`}
 			>
 				{/* content */}
-				<div className='flex flex-col gap-4 w-full items-center  p-6 rounded-lg'>
-					<p className='text-base text-neutral-content'>{content}</p>
-					<h1 className='font-medium md:text-3xl '>{title}</h1>
-					<p className='text-bold font-lg text-center'>{description}</p>
+				<div className='flex flex-col gap-2 md:gap-4 w-full items-center  p-6 rounded-lg'>
+					<p className='text-sm md:text-base text-neutral-content'>{content}</p>
+					<h1 className='font-bold text-xl md:text-4xl '>{title}</h1>
+					<p className='font-medium text-sm md:text-base text-center'>{description}</p>
 				</div>
 
 				{/* 8 empty divs needed for the 3D effect */}
@@ -108,11 +108,11 @@ const MallStatus: FC = () => {
 				initial={{ opacity: 0 }}
 				animate={isInView ? { opacity: 1 } : { opacity: 0 }}
 				transition={{ duration: 0.8, delay: 0.2 }}
-				className={'text-base md:text-4xl font-black py-4 '}
+				className={'text-lg md:text-3xl font-black pb-4  pt-12'}
 			>
 				专注移动电商营销 打造全域一体综合经营
 			</motion.h1>
-			<div className='w-full grid md:grid-cols-2 gap-6 aspect-square'>
+			<div className='w-full grid lg:grid-cols-2 gap-6 aspect-square'>
 				{items.map((item, index) => (
 					<motion.div
 						key={index}

@@ -8,7 +8,7 @@ import MallStatus from '@/components/Home/MallStatus'
 
 const Page: FC = () => {
 	return (
-		<section className={'min-h-full px-3 md:px-20 2xl:px-80 '}>
+		<section className={'min-h-full px-3 mediaGlobal'}>
 			<Hero />
 			<MallStatus />
 		</section>
