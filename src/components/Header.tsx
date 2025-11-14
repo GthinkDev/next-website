@@ -8,6 +8,8 @@ import MobileNav from '@/components/Navbar/MobileNav'
 import ThemeModal from '@/components/Themes/ThemeModal'
 import { Logo } from '@/components/icons'
 import Link from 'next/link'
+import { div } from 'framer-motion/client'
+import { Menu, X } from 'lucide-react'
 
 const Header: FC = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -30,44 +32,59 @@ const Header: FC = () => {
 				<div className={'flex-1 h-full hidden lg:block'}>
 					<Navbar />
 				</div>
-				<div className='flex gap-2 items-center'>
+				<div className='flex gap-4 items-center'>
 					<ThemeModal />
 					{/* 汉堡菜单图标 - 仅在小屏幕显示 */}
-					<button className='lg:hidden btn btn-ghost btn-square' onClick={toggleMobileMenu}>
-						<svg
+					<button
+						className='lg:hidden btn btn-ghost btn-square'
+						onClick={toggleMobileMenu}
+						title={isMobileMenuOpen ? '关闭菜单' : '打开菜单'}
+						aria-label={isMobileMenuOpen ? '关闭菜单' : '打开菜单'}
+					>
+						{/* <svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
 							viewBox='0 0 24 24'
-							className='inline-block w-6 h-6 stroke-current'
+							className={`inline-block w-6 h-6 stroke-current transition-all duration-300 ease-in-out ${
+								isMobileMenuOpen ? 'rotate-90' : ''
+							}`}
 						>
 							<path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h16M4 18h16'></path>
-						</svg>
+						</svg> */}
+						<Menu className='text-base-content' strokeWidth={2.25} />
 					</button>
 				</div>
 			</header>
 
 			{/* 移动端导航弹层 */}
-			{isMobileMenuOpen && (
-				<div className='fixed inset-x-0 top-0 bottom-0 z-50 lg:hidden bg-base-100 overflow-y-auto'>
-					<div className='flex justify-between items-center p-4 border-b border-base-300'>
-						<p className='font-black text-lg'>百分之三科技</p>
-						<button className='btn btn-ghost btn-square' onClick={toggleMobileMenu}>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								fill='none'
-								viewBox='0 0 24 24'
-								className='inline-block w-6 h-6 stroke-current'
-							>
-								<path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
-							</svg>
-						</button>
-					</div>
-					{/* 导航项列表 */}
-					<div className='py-20 flex flex-col h-full gap-8  items-center'>
-						<MobileNav toggleMobileMenu={toggleMobileMenu} />
-					</div>
+			<div
+				className={`fixed right-0 top-0 bottom-0 w-full z-50 lg:hidden bg-base-100 overflow-y-auto transition-all duration-300 ease-in-out transform shadow-xl ${
+					isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+				}`}
+			>
+				<div className='flex justify-between items-center p-4 h-16 border-b border-base-300'>
+					<Link className='flex justify-start gap-2 text-base-content items-center ' href='/'>
+						<Logo />
+						<p className='font-black text-lg hidden md:block'>百分之三科技</p>
+					</Link>
+					<button
+						className='btn btn-ghost btn-square'
+						onClick={toggleMobileMenu}
+						title='关闭菜单'
+						aria-label='关闭菜单'
+					>
+						<X
+							className={`inline-block w-6 h-6 text-base-content stroke-current transition-all duration-300 ease-in-out ${
+								isMobileMenuOpen ? 'rotate-90' : ''
+							}`}
+						/>
+					</button>
 				</div>
-			)}
+				{/* 导航项列表 */}
+				<div className='py-20 flex flex-col h-full gap-8  items-center'>
+					<MobileNav toggleMobileMenu={toggleMobileMenu} />
+				</div>
+			</div>
 		</>
 	)
 }

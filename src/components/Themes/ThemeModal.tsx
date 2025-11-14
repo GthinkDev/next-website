@@ -5,6 +5,7 @@ import type { FC } from 'react'
 import React, { memo, useEffect, useState } from 'react'
 import ThemeData from '@/components/Themes/ThemeData'
 import ThemeItems from '@/components/Themes/ThemeItems'
+import { Palette } from 'lucide-react'
 
 const ThemeModal: FC = () => {
 	const [selectedTheme, setSelectedTheme] = useState<string>('winter')
@@ -61,9 +62,10 @@ const ThemeModal: FC = () => {
 	}
 	return (
 		<div className='dropdown dropdown-end'>
-			<div tabIndex={0} role='button' className='btn  hover:bg-base-200 flex gap-4'>
-				<Image src={'/theme.png'} alt={'missing'} width={24} height={24} />
-				<span>{currentThemeName}</span>
+			<div tabIndex={0} role='button' className=' btn btn-ghost btn-square'>
+				<Palette className='text-base-content' />
+				{/* <Image src={'/theme.png'} alt={'missing'} width={24} height={24} /> */}
+				{/* <span>{currentThemeName}</span> */}
 				{/*<svg*/}
 				{/*  width="12px"*/}
 				{/*  height="12px"*/}

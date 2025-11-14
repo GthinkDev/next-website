@@ -19,16 +19,24 @@ const MobileNav: FC<IProps> = ({ toggleMobileMenu }) => {
 	}
 
 	return (
-		<ul className={'gap-2 flex flex-col w-1/4'}>
+		<ul className={'gap-2 flex flex-col w-1/2'}>
 			{NavData.map((item, index) => (
-				<li key={index}>
+				<li
+					key={index}
+					className='transform transition-all duration-300 ease-in-out '
+					style={{
+						transitionDelay: `${index * 50}ms`,
+						opacity: 1,
+						transform: 'translateY(0)',
+					}}
+				>
 					<Link
 						href={item.href}
 						onClick={handleNavClick}
-						className={`block py-3 px-4 rounded-lg transition-colors text-center ${
+						className={`block py-3 px-4 rounded-lg transition-all duration-300 text-center ${
 							item.href === pathname
-								? 'bg-primary text-primary-content font-medium'
-								: 'hover:bg-base-200 text-base-content'
+								? 'bg-primary text-primary-content font-medium '
+								: 'hover:bg-base-200 text-base-content '
 						}`}
 					>
 						{item.name}
